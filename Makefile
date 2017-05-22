@@ -1,4 +1,4 @@
-TARGET = RELATÓRIO_PI1.pdf
+TARGET = RELATÓRIO_PI1_TURMA-A.pdf
 
 BIBTEX = bibtex
 LATEX = latex
