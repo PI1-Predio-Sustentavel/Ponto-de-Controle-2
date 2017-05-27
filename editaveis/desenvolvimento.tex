@@ -92,6 +92,34 @@ diferente e com aparelhos diferentes. Desta forma, cada área tem suas particula
  mostrado e explicado a seguir.
 
 \section{Controle de Frequência}
+Para o controle de frequência nas aulas, será utilizado o seguinte aparelho (apresentado anteriormente no Ponto de Controle 1).
+O funcionamento dele acontece independente de sinal de WiFi e o aparelho é de porte único do professor.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.45]{figuras/freq.eps}
+  \caption{Aparelho Para Controle de Frequência}
+\end{figure}
+
+Em relação à aspectos técnicos do aparelho, a figura a seguir mostra detalhadamente quais os instrumentos utilizados.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.45]{figuras/aberto.eps}
+  \caption{Aparelho Para Controle de Frequência Detalhado}
+\end{figure}
+
+Cada um dos componentes possui sua função individual:
+\begin{itemize}
+  \item Componentes 1 e 9: Case superior e inferior. Há um orifício na parte superior do dispositivo para passagem do conector USB.
+  \item Componente 2: Teclado matricial de película 12 teclas.
+  \item Componente 3: Display LCD 16x2 com backlight
+  \item Componente 4: módulo Leitor de cartões RFID Mfrc522 Mifare, faz leitura e escrita em cartões RFID.
+  \item Componente 5: Módulo WiFi ESP8266 ESP-01, se conecta com a rede wifi e transmite e recebe dados servidor online.
+  \item Componente 6: Módulo Carregador de Baterias de Lítio TP4056, carrega a bateria através do seu conector USB.
+  \item Componente 7: Placa controladora faz as conexões com os demais componentes e possui um microcontrolador ATmega1280 16au da família AVR com o bootloader do Arduino mega.
+  \item Componente 8: Baterias do tablet Dl Lenoxx Navcity Phaser. Possuem capacidade de 2000mAh e tensão de 3,7v.
+\end{itemize}
 
 
 
