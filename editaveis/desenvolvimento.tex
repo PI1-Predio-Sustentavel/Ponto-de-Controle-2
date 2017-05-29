@@ -4,6 +4,157 @@ Neste capítulo abordaremos todas as soluções idealizadas para o projeto. O ca
 
 \chapter[Estruturas e Materiais]{Estruturas e Materiais}
 
+\section{Otimização da Planta}
+
+As soluções apresentadas para a parte estrutural do projeto são apenas sugestões, visto que as decisões efetivas devem ser feitas por um profissional de engenharia civil, de soluções para os problemas que o prédio UAC (Unidade Acadêmica) apresenta, cuja a planta baixa foi usada para a análise dos problemas, visando uma estrutura que aproveite melhor os recursos naturais e seja mais sustentável.
+Similarmente, para realizar este projeto, foi necessária uma adaptação de elementos relativos a automação predial à um projeto de construção civil comum com integração do sistema Smart Grid, dando ênfase na sustentabilidade. Um sistema de automação pode ser centralizado ou distribuído. Os centralizados são aqueles que utilizam uma seção especificamente para o controle dos dispositivos, tanto para receber quanto enviar sinais. Os sistemas distribuídos são considerados descentralizados porque utilizam de diversos dispositivos, cada um com uma função específica dentro do sistema, sendo distribuídos por toda instalação e interligados por uma rede (DIAS, 2004).
+Considerando que a rede de automação a ser implementada possui um sistema centralizado, viu-se a necessidade de um local específico para controlar e monitorar o sistema. Já para promover a integração do Smart Grid ao projeto, foi constatado que o melhor ponto para a instalação das placas fotovoltaicas seria no telhado, onde há maior contato com sol, menor projeção de sombras e resguardado de contato de animais e pessoas. Quanto à posição da placa, esta deverá estar voltada para o norte.
+A função das salas foi baseada na necessidade do prédio, a qual consta adicionar mais salas de aula e de laboratório no campus. Dada a quantidade de alunos que ingressam todo semestre, somente os prédios atuais não são capazes de atender a demanda, são providas cerca de 140 vagas pelo Vestibular da Universidade de Brasília e pelo ENEM, com a pouca quantidade de formaturas por semestre, o campus está sobrecarregado.
+Além disso, vê-se a necessidade de aprimorar o currículo dos cursos da Faculdade do Gama. Para isto, seria primordial a contratação de novos professores, porém com a falta de estrutura atual não seria praticável, portanto com a construção do prédio inteligente, além de sanar o problema da falta de espaço, este projeto vai progredir o campus no sentido educacional.
+Considerando a efetiva carência foi estabelecido que as salas do pavimento inferior serão designadas para laboratórios, enquanto as do pavimento superior cumprirão função de salas de aulas. Haverá adicionalmente uma sala de estudos no lugar que se dispõe a biblioteca do prédio atual de salas e no lugar da secretaria, no prédio inteligente constará a sala de controle. O pavimento superior também contará com um espaço para Xerox e ao lado, mais salas.
+A definição das finalidades de cada sala foi feita com o auxílio da planta disponibilizada pela própria Universidade. Além disso, a planta foi usada para a produção de um modelo 3D como uma forma complementar da representação do prédio. Para isso, foram considerados alguns softwares como: “AutoCad”, “SketchUp” e o “Revit”.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/planta_inf_estruturas.eps}
+  \caption{Planta Baixa com finalidade das salas - Piso Inferior.}
+  \label{fig:planta_inf_estruturas}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/planta_sup_estruturas.eps}
+  \caption{Planta Baixa com finalidade das salas - Piso Superior.}
+  \label{fig:planta_sup_estruturas}
+\end{figure}
+
+Em relação ao “SketchUp” é levado em conta a facilidade na utilização do programa, e o fato de sua biblioteca online de modelagem de interiores ser bem completa. Quanto ao Revit, é um programa que tem melhor aplicação para modelagens arquitetônicas, hidráulicas e elétricas. O AutoCAD é semelhante ao Revit, porém é necessário que as etapas do desenho sejam feitas separadamente. Para definir qual será utilizado, será levado em consideração o programa que suprir as necessidades do projeto da melhor forma. Serão analisados quesitos como facilidade de aquisição, facilidade de utilização, biblioteca, melhores ferramentas. Dessa forma, o “AutoCad” mostrou-se como melhor opção por conta da facilidade para se achar tutoriais e materiais que ensinam a usar o programa de forma bem eficiente.
+O motivo para a realização da modelagem 3D do prédio é a facilidade de ver como será o prédio após a sua construção.Além de facilitar a visualização de qualquer problema que tenha passado despercebido na planta. Também facilita prever como as pessoas passarão pelo prédio e como também elas poderão se acomodar dentro do mesmo. Um desenho em duas dimensões não é capaz de passar a quantidade de informações que um modelo em três dimensões passa para seu observador.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/planta_3d_estruturas.eps}
+  \caption{Modelagem 3D- Pisos inferior e superior da esquerda para direita}
+  \label{fig:planta_3d_estruturas}
+\end{figure}
+
+Um dos problemas mais latentes observado pelos usuários do prédio é a temperatura elevada que permanece nas salas, o que causa grande desconforto para os mesmo. Para encontrar uma solução, foi analisado a relação da incidência solar com posicionamento do prédio. Dessa forma, por meio do programa SOL-AR 6.2 fornecido pela UFSC, foi possível obter a carta solar de Brasília para análise do melhor posicionamento do novo prédio do campus da FGA.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/carta_solar.eps}
+  \caption{Carta Solar de Brasília: até junho e após junho respectivamente.}
+  \label{fig:carta_solar}
+\end{figure}
+
+O resultado da carta solar é um par de eixos ordenado com o eixo das abcissas representando a hora do dia variando de 6 às 18 e o eixo das ordenadas representa os dias do ano e cada ponta desse par de eixos representa uma direção geográfica (Norte, Sul, Leste e Oeste) e a partir do sistema de cores é possível fazer o estudo da região. Analisando os resultados obtidos nota-se que o Leste apresenta uma radiação mais amena do que a Oeste que conta com grande irradiação solar, ou seja, maior temperatura ao longo do dia. Como as salas de aula são lugares de longa permanência o ideal é que elas fiquem voltadas ao Leste devido a temperatura se manter mais amena ao longo do dia.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.45]{figuras/posicao.eps}
+  \caption{Posicionamento do Prédio Inteligente.}
+  \label{fig:posicao}
+\end{figure}
+
+Porém como o Sol nasce ao leste seu reflexo poderia atrapalhar o rendimento das aulas. Problema esse que pode ser resolvido com o bom posicionamento de brises para diminuir a incidência solar dentro da sala de aula. Essas estruturas já existem no prédio atual, mas poderiam ser substituídos pelo brise que acompanha o trajeto solar.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/briseiros.eps}
+  \caption{Exemplos de briseiros.}
+  \label{fig:briseiros}
+\end{figure}
+
+Outro problema que aflige a estrutura é a poeira proveniente dos arredores do campus, problema este que também pode ser amenizado com os brises mencionados anteriormente e também com uso de cobogós e jardins verticais. Porém, com exceção do jardim vertical, os brises e cobogós já foram implementados no prédio atual. Dessa forma, cabe fazer a análise de jardins verticais como recurso para amenizar o problema.
+O ar do Gama é muito seco o que favorece a permanência da poeira no ar, além de secar as vias respiratórias. Dessa forma o controle da umidade é essencial para mitigar o problema da poeira no campus. Algumas soluções podem ser tomadas para aumentar a umidade ar como a arborização no campus e uso de jardins verticais. Estas foram escolhidas para o projeto pois apresentam certas vantagens como descrito nas tabelas (Tabela 1 e 2). As desvantagens do jardim vertical em geral são devidas a problemas de projeto e plantio. A água para irrigação das árvores e dos jardins poderá ser proveniente do poço já existente que abastece o campus ou também por um reservatório que reaproveita água da chuva. Para o último, o dimensionamento dependerá de diversos fatores que vão além do escopo deste projeto como: tipo de irrigação e vazão do mecanismo, espécie de planta a ser usada e litros/dia de água que esses recursos vão necessitar, além da análise de temporadas de chuvas na região do DF.
+
+\begin{table}[]
+\centering
+\caption{Vantagens e desvantagens de arbustos e jardins verticais.}
+\label{my-label}
+\begin{tabular}{|l|l|l|l}
+\textbf{}             & \parbox[t]{4cm}{Arbustos}                                                                                                                                                          & \parbox[t]{4cm}{Jardins Verticais}                                                                                                                                                                               \\
+\textbf{Vantagens}    & \begin{tabular}[c]{@{}l@{}} \parbox[t]{4cm}{Redução do sol;}\\ \parbox[t]{4cm}{Maior conforto térmico;}\\ \parbox[t]{4cm}{Aumento da umidade relativa do ar;}\\ \parbox[t]{4cm}{Redução da poluição;}\\ \parbox[t]{4cm}{Atenuação sonora;}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Diminui a temperatura no interior da edificação;}\\ \parbox[t]{4cm}{Controle da umidade;Proteção da alvenaria;}\\ \parbox[t]{4cm}{Baixa manutenção;}\\ \parbox[t]{4cm}{Redução de poeira;}\\ \parbox[t]{4cm}{Embelezamento;}\end{tabular} \\
+\textbf{Desvantagens} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Problema com rede elétrica ou telefônica;}\\ \parbox[t]{4cm}{Sujeira provocada por pássaros;}\end{tabular}                                               & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Relativas à problemas na implantação do jardim;}\\ \parbox[t]{4cm}{Manutenção inapropriada}\end{tabular}                                                                              
+\end{tabular}
+\end{table}
+
+Por conta da poeira e do mal posicionamento do prédio, não há boa climatização nas salas. Para solucionar esse problema é proposto que se implemente ar-condicionados nas salas e laboratórios, pois, apesar de não ser uma alternativa muito ecológica, mostrou se mais apropriado para atender as demandas térmicas dos aparelhos eletrônicos e dos usuários do campus, pois permite um controle maior sobre a climatização.
+
+\begin{table}[]
+\centering
+\caption{Vantagens e desvantagens do ar-condicionado, ventilador e umidificador
+.}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{}             & \parbox[t]{4cm}{Ar-condicionado}                                                                                                                                                                                                                                                                      & \parbox[t]{4cm}{Ventilador}                                                                                                                                     & \parbox[t]{4cm}{Umidificador}                                                                                                                                                                                           \\ \hline
+\textbf{Vantagens}    & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Controle de temperatura;}\\ \parbox[t]{4cm}{Evita a entrada de poeira devido ao fechamento das janelas e portas;}\\ \parbox[t]{4cm}{Ambiente arejado;Melhora o ar em ambientes fechados(“limpa”);}\\ \parbox[t]{4cm}{Reduz o estresse térmico sobre aparelhos eletrônicos os como computadores;}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Mais econômico comparado ao ar condicionado;}\\ \parbox[t]{4cm}{Baixo custo;}\\ \parbox[t]{4cm}{Grande variedade de modelos;}\\ \parbox[t]{4cm}{Portátil;}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Consumo energético menor;}\\ \parbox[t]{4cm}{Funciona em locais abertos;}\\ \parbox[t]{4cm}{Ideais para locais secos e frios;}\\ \parbox[t]{4cm}{Leve e compacto;}\\ \parbox[t]{4cm}{Mais em conta que um ar condicionado;}\end{tabular}         \\ \hline
+\textbf{Desvantagens} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Ambiente ressecado (ruim para quem tem rinite, bronquite e sinusite);}\\ \parbox[t]{4cm}{Instalação trabalhosa;}\\ \parbox[t]{4cm}{Preço;}\\ \parbox[t]{4cm}{Consumo energético e Impacto ambiental;}\end{tabular}                                                                                            & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Espalha partículas;}\\ \parbox[t]{4cm}{Direciona o vento para um único ponto;}\\ \parbox[t]{4cm}{Não umidifica o ar;}\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Não resfria ambientes muito quentes, apenas umidifica e ventila o local;}\\ \parbox[t]{4cm}{Menos eficiente que um ar condicionado, pois não funciona bem em qualquer ambiente;}\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Organização Interna}
+
+Um dos problemas que o atual prédio de salas de aula da FGA enfrenta é o mau posicionamento dos quadros. Em muitas salas o quadro está muito alto forçando o professor a usar um tablado para alcançar o mesmo e em outras salas está tão baixo que é necessário que o professor só use da metade para cima. Segundo (MORO, 2005) o mobiliário da sala de aula como outros fatores físicos ,são grandes influenciadores no desempenho, segurança, conforto e comportamento dos alunos. Assim (LUZ et al., 2005) afirma que um quadro mal posicionado pode ocasionar o esgotamento dos pequenos músculos ligados aos globos oculares,podendo causar tensão e desconforto em graus mais avançados.
+Desta forma podemos também fazer um comparativo com a posição dos projetores. Muitas vezes quando o professor utiliza o powerpoint, a imagem projetada apresenta baixa nitidez devido a luminosidade que entra pelas janelas e muitas vezes há complicações para enxergar uma parte da imagem que fica entre o quadro e a parede. Outro agravante é a necessidade de subir em carteiras para ligar e desligar esses equipamentos, o que pode comprometer a segurança dos usuários.
+Para a questão da projeção da imagem, a solução consiste em colocar a lona de projeção e o projetor em um local da sala cuja luminosidade proveniente das janelas não atrapalhe a imagem projetada. Já para ligar o dispositivo, a solução deste problema é a extensão do mecanismo que liga e desliga o projetor para um local próximo ao professor, onde ficam os cabos que conectam o projetor ao computador.
+Em grande parte das salas de aula as turmas são muito grandes, então os alunos que escolhem um assento no fundo da sala tem uma dificuldade para enxergar o quadro. A solução para esse problema é a construção de um tablado de madeira com vários níveis similar a um anfiteatro, mas adaptado para as dimensões da sala. Dessa forma, as cadeiras continuarão em sua forma matricial porém, em salas grandes como a Superior 1, o tablado deve surgir a partir da 6ª fileira com degraus de 1 metro de comprimento e 13 centímetros de altura.
+Devido ao crescente uso de recursos tecnológicos em sala de aula, tomadas são essenciais. Porém, a localização das tomadas, no fundo e laterais da sala força o aluno que precisa destas, escolher um assento no fundo da sala dificultando sua visão do quadro e do projetor. Para solucionar o problema pode-se incorporar a solução de outro mencionado mais acima. As tomadas podem ser incorporadas ao tablado que será construído para se colocar as carteiras. Assim, pode-se colocar uma tomada perto de cada carteira, aumentando as opções de escolha do lugar onde o alunos deseja se sentar e também a acessibilidade a este recurso.
+Quanto a acústica, que também é problemática em salas maiores, deverá ser feita a instalação de caixas de som e disponibilização de microfones para os professores. Propõe-se que as caixas de som devam ser instaladas acima do quadro da sala de aula e estará a disposição do professor um microfone para que ele possa ser ouvido por toda a sala.
+Por fim, a climatização da sala, que de acordo com o questionário respondido pelos alunos, é um dos problemas mais agravantes na sala de aula, juntamente com a poeira, é atualmente feita apenas por intermédio de janelas. Apesar de não ser uma solução muito ecológica, a melhor opção para amenizar esse problema é o uso de ar condicionados. Que serão posicionados ou no fundo da sala ou na lateral oposta às janelas,dependendo do formato ou da localização da sala.
+
+\subsection{Materiais}
+
+Assim como foi feito nos tópicos anteriores, as propostas de soluções para o uso de materiais diferenciados na construção do Prédio Inteligente são apenas sugestões, visto que os autores do projeto não possuem capacidade para decidir entre um material e outro efetivamente. 
+O conhecimento das propriedades dos materiais auxilia na sua correta seleção para os diversos usos, na determinação das suas propriedades e qualidades tecnológicas, proporciona a escolha de fatores de segurança adequados e vários outros fatores que que irão influir de maneira decisiva na parte econômica de um projeto.
+A partir disso nota-se que é fundamental a seleção de materiais que serão utilizados no projeto. Uma metodologia comumente usada para a seleção de materiais na fase inicial é a Metodologia de Pugh. Essa metodologia consiste em comparar os diversos conceitos de produto com que se pretende trabalhar com um conceito de referência facilitando a escolha de um conceito que se sobressaia.
+É feita então, uma análise das vantagens (ou pontos positivos), desvantagens (ou pontos negativos) e equivalência dos conceitos propostos em relação ao conceito de referência. Esta técnica possibilita a escolha do melhor conceito, chamado de conceito “vencedor”, a ser adotado para o produto.
+A seguir, tem-se o comparativo entre as características dos materiais que embora comumente utilizados, foram descartados do projeto e os materiais que foram escolhidos para suprir uma maior cota de requisitos de um prédio inteligente e sustentável.
+
+\begin{table}[]
+\centering
+\caption{Materiais usados comumente em prédios.}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{}               & \parbox[t]{4cm}{Concreto Armado}                                                                                                                                                                                                                                                                                                                                                                                                                                                        & \parbox[t]{4cm}{Esquadrias de Alumínio}                                                                                                                                                                                                                                          \\ \hline
+\textbf{Aplicabilidade} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Piso;}\\ \parbox[t]{4cm}{Pavimento;}\\ \parbox[t]{4cm}{Fundação;}\\ \parbox[t]{4cm}{Estrutura;}\\ \parbox[t]{4cm}{Alvenaria;}\\ \parbox[t]{4cm}{Cobertura.}\end{tabular}                                                                                                                                                                                                                                                                                                                                                          & \parbox[t]{4cm}{Esquadrias de portas e janelas;}                                                                                                                                                                                                                                 \\ \hline
+\textbf{Vantagens}      & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Elevada resistência à compressão;}\\ \parbox[t]{4cm}{Pode suportar uma boa quantidade de esforços de tração;}\\ \parbox[t]{4cm}{O custo de manutenção baixo;}\\ \parbox[t]{4cm}{Pode ser moldada de diversas maneiras e formatos;}\\ \parbox[t]{4cm}{Exige mão de obra menos qualificada para sua execução;}\\ \parbox[t]{4cm}{Boa resistência ao fogo e ao tempo.}\end{tabular}                                                                                                                                                  & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Resistência à corrosão do tempo e da maresia;}\\ \parbox[t]{4cm}{São versáteis e bonitas esteticamente;}\\ \parbox[t]{4cm}{O alumínio ainda é de fácil limpeza e oferece ótima vedação à água e ar;}\\ \parbox[t]{4cm}{É leve, o que facilita sua instalação e transporte.}\end{tabular} \\ \hline
+Desvantagens            & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{A resistência à tração do concreto armado é cerca de um décimo da sua resistência à compressão;}\\ \parbox[t]{4cm}{Por ser muitas vezes produzido in loco, a resistência final do concreto pode ser afetada devido a erros durante os processos de mistura e cura;}\\ \parbox[t]{4cm}{O concreto armado utiliza-se de formas de madeira ou metálicas, encarecendo o projeto;Gera muitos resíduos e lixos de construção;}\\ \parbox[t]{4cm}{Tem grande peso próprio (2.500 kg/m3).}\end{tabular} & \parbox[t]{4cm}{Baixo isolamento térmico. Alguns fabricantes adicionam outros materiais na fabricação de produtos em alumínio para reduzir esse problema, que precisa ser compensado com climatizadores de ambientes.} \\ \hline                                                        
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Vantagens e desvantagens dos materiais sugeridos 1.}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{}               & \parbox[t]{4cm}{Cimento de alto Desempenho(CAD)}                                                                                                                                                                                                                                                                                                                                                                                                                   & \parbox[t]{4cm}{Estruturas de Aço}                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+\textbf{Aplicabilidade} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Piso de alta resistência;}\\ \parbox[t]{4cm}{Pavimento;}\\ \parbox[t]{4cm}{Fundação;}\end{tabular}                                                                                                                                                                                                                                                                                                                                                        & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Supraestrutura;}\\ \parbox[t]{4cm}{Vigas;}\\ \parbox[t]{4cm}{Armaduras para concreto;}\end{tabular}                                                                                                                                                                                                                                                                                                           \\ \hline
+\textbf{Vantagens}      & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Aumento da capacidade resistente dos elementos estruturais;}\\ \parbox[t]{4cm}{Redução do peso próprio;}\\ \parbox[t]{4cm}{Redução da força na fundação;Possibilidade de redução de custos;}\\ \parbox[t]{4cm}{Menor fluência que os concretos de baixa resistência;}\\ \parbox[t]{4cm}{Baixa permeabilidade;}\end{tabular}                                                                                                                                                                 & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Prazos curtos: rápido tempo de fabricação e montagem;}\\ \parbox[t]{4cm}{Racionalização de material e mão-de-obra;}\\ \parbox[t]{4cm}{Obra limpa e organizada;}\\ \parbox[t]{4cm}{Flexibilidade de reformas;}\\ \parbox[t]{4cm}{Maior área útil e distância entre vãos;}\\ \parbox[t]{4cm}{Possibilidade de reciclagem.}\end{tabular}                                                                                                                            \\ \hline
+Desvantagens            & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Rigoroso controle de qualidade em todas as etapas de produção do concreto. Este fator praticamente obriga que concretos desse tipo sejam executados por concreteiras, desencorajando a produção no canteiro de obras;}\\ \parbox[t]{4cm}{Desconhecimento, pela maioria dos projetistas, das características, propriedades e metodologia de cálculo do concreto de alta resistência.Ruptura frágil do material (sem aviso).}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Risco de custos maiores: se o projeto não levar em conta todos os itens da construção, o preço pode ser de 5 a 20\% maior se comparado ao processo tradicional;}\\ \parbox[t]{4cm}{Dificuldade de transporte;}\\ \parbox[t]{4cm}{Necessidade de amarração: a estrutura de aço necessita de perfis complementares para se unir às superfícies de fechamento;}\\ \parbox[t]{4cm}{Contração e dilatação constantes;}\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Vantagens e desvantagens dos materiais sugeridos 2.}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{}               & \parbox[t]{4cm}{Esquadrias de PVC}                                                                                                                                                                                                                                                                                                       & \parbox[t]{4cm}{Tintas Ecológicas}                                                                                                                                                                                                                                                                                                                                                                                                             \\ \hline
+\textbf{Aplicabilidade} & \parbox[t]{4cm}{Esquadrias de portas e janelas;}                                                                                                                                                                                                                                                                                         & \parbox[t]{4cm}{Acabamentos externos e internos.}                                                                                                                                                                                                                                                                                                                                                                                              \\ \hline
+\textbf{Vantagens}      & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Possuem excelente desempenho térmico e acústico;}\\ \parbox[t]{4cm}{São leves;}\\ \parbox[t]{4cm}{Não exigem qualquer tipo de manutenção além de limpeza periódica;}\\ \parbox[t]{4cm}{Apresentam alta qualidade, resistência e durabilidade;}\\ \parbox[t]{4cm}{Garante grande estabilidade dimensional;}\\ \parbox[t]{4cm}{Alto índice de vedação e estanqueidade;}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Alta qualidade e baixo odor;}\\ \parbox[t]{4cm}{Boa funcionalidade na cobertura e aderência de superfícies em alvenaria, reboco, amianto, divisórias, forro, madeira, gesso e massa corrida;}\\ \parbox[t]{4cm}{Variadas opções de cores e pode ser aplicada em ambientes internos e externos;}\\ \parbox[t]{4cm}{Não agridem o meio ambiente;}\\ \parbox[t]{4cm}{Não oferecem risco a saúde do aplicador e nem do usuário da área que recebeu a pintura.}\end{tabular} \\ \hline
+Desvantagens            & \begin{tabular}[c]{@{}l@{}}\parbox[t]{4cm}{Tem um custo maior devido a sua qualidade e estrutura diferenciada;}\\ \parbox[t]{4cm}{São mais sensíveis ao sol que as esquadrias de alumínio.}\end{tabular}                                                                                                                                                  & \parbox[t]{4cm}{Tem um custo maior:10 a 20\% mais caras que as tintas tradicionais;} \\ \hline                                                                                                                                                                                                                                                                                                                                                         
+\end{tabular}
+\end{table}
+
+Para a cobertura, uma alternativa moderna e econômica são as lajes nervuradas. Podem ser feitas com concreto ecológico e sua forma geométrica reduz o consumo de aço e concreto em até 30\%, diminuído também o peso total da estrutura.
+Com o recente senso de responsabilidade ecológica e a aplicação dos conceitos de sustentabilidade na construção civil, diversos materiais estão sendo desenvolvidos buscando ser mais eficientes e menos agressivos ao ambiente. No entanto, poucas opções estão disponíveis no mercado ou são produzidos em larga escala, o que torna esses materiais inviáveis ao projeto. Dessa maneira em alguns casos, ainda que existam soluções mais tecnológicas e avançadas, foi necessário se ater a materiais que favorecem disponibilidade, custo e fácil manuseio.
+
+
 \chapter[Smart Grid]{Smart Grid}
 
 \section{Energia Solar}
