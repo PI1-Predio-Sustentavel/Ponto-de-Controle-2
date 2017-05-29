@@ -213,7 +213,7 @@ Já nas opções descartadas, verificou-se a dificuldade de manutenção quando 
 Com a fonte de geração de energia determinada, bem como o local da instalação da micro-usina solar fotovoltaica, fez-se uma estimativa de consumo de energia (Wh) baseada na demanda já requerida pelo prédio atual, com o  objetivo de definir a potência instalada da micro-usina. 
 Mesmo com a existência de muitas variáveis desconhecidas, que impactam negativamente no valor estimado, os dados conhecidos foram suficiente para estimar a potência instalada, bem como a quantidade de módulos fotovoltaicos necessários para suprir a demanda energética do novo prédio. Ao se fazer essa estimativa com a demanda do prédio já existente têm-se  alta possibilidade de produzir-se uma maior quantidade de energia do que a realmente necessária, visto que os equipamentos elétricos e eletrônicos selecionados pelo subgrupo de instrumentação, são altamente eficientes energeticamente.
 Para relembrar o efeito fotovoltaico é resultado da interação da luz com os materiais semicondutores (o mais usado é o silício, pois tem em grande quantidade na natureza) de uma célula fotovoltaica. No interior desta, tal efeito é o responsável pela transformação de energia solar em energia elétrica. A luz solar é composta por fótons que quando incididos no material semicondutor parte deles são absorvidos, excitando os elétrons do material, gerando assim um fluxo de elétrons (corrente). (IDEAL, 2015)
-A geração de energia elétrica a partir de placas fotovoltaica é um método bastante difundido atualmente e vem crescendo constantemente. As células solares captam a radiação do sol e através dos fótons geram corrente contínua. Essa corrente passa por um inversor para que seja convertida em corrente alternada com as características da rede (senoidal e frequência de 60Hz). Após passar pelo inversor a eletricidade poderá ser usada para o consumo. Caso a geração exceda o consumo, o restante é inserido na rede e caso o consumo seja maior que a geração solar o restante da energia consumida é oriunda da rede elétrica. (AMERICA DO SOL, 2016)
+A geração de energia elétrica a partir de placas fotovoltaica é um método bastante difundido atualmente e vem crescendo constantemente. As células solares captam a radiação do sol e através dos fótons geram corrente contínua. Essa corrente passa por um inversor para que seja convertida em corrente alternada com as características da rede (senoidal e frequência de 60Hz). Após passar pelo inversor a eletricidade poderá ser usada para o consumo. Caso a geração exceda o consumo, o restante é inserido na rede e caso o consumo seja maior que a geração solar o restante da energia consumida é oriunda da rede elétrica.
 Para a realização da estimativa de consumo de energia, escolheu-se como variáveis: as lâmpadas, computadores e ar-condicionados. As mesmas foram escolhidas visto à facilidade de dimensioná-las. Também estabeleceu-se algumas premissas, como: período de funcionamento das variáveis de 10 horas, ou seja, no período onde possui maior fluxo de pessoas e desconsiderou-se a quantidade de equipamentos não operantes. Essas premissas foram tomadas devido à grande margem de erro que se tem. A seguir, as tabelas ~\ref{fig:lampadas}, ~\ref{fig:computadores} e ~\ref{fig:ar_condicionados} mostram a potência e horário de funcionamento de cada equipamento, bem como a energia consumida por cada um.
 Onde:
 
@@ -504,7 +504,6 @@ Com base nos dados da tabela anterior, pode-se afirmar que a autonomia da bateri
 
 Por fim, em termos econômicos, obtivemos o seguintes dados de custos:
 
-
 \begin{table}[!h]
   \centering
   \caption{Custos dos Componentes - Aparelho de Frequência}
@@ -781,3 +780,128 @@ Além de enviar e receber dados da sala de controle, alguns dispositivos se comu
 \end{figure}
 
 \chapter[Interfaces e Processamento de Software]{Interfaces e Processamento de Software}
+
+\section{Estrutura do Banco de Dados}
+
+O projeto do prédio inteligente/sustentável faz com que haja necessidade de armazenamento de dados. Os quais são gerados a partir da identificação diária do aluno em sala de aula, que é utilizado para o controle de acesso à cada aula, dos dados relacionados à produção e consumo de energia, que são gerenciados pelo Smart Grid e dados comuns.
+Para o armazenamento de dados há algumas alternativas.
+\begin{itemize}
+  \item Servidores Locais
+    \begin{itemize}
+    \item Torre;
+    \item Rack;
+    \item Blade;
+    \end{itemize}
+  \item Dispositivos de Storage;
+  \item Servidores e Nuvem;
+\end{itemize}
+
+Os servidores locais permitem com que dados possam ser acessados, alterados e adicionados por computadores ligados ao(s) servidor(es). Geralmente, são usados quando há uma grande transferência de dados entre as máquinas/servidores. Assim, podendo ser acessado com mais facilidade, agilidade, rapidez e segurança. Porém há um gasto maior com profissionais especializados em manutenção de tais servidores.
+Os servidores do tipo Torre é o modelo mais básico, indicado para pequenas empresas, as quais não dispõem de uma sala de dados específica para armazenar os servidores. Tendo os seus componentes de hardware adaptados às necessidades e ao tamanho do projeto e/ou equipe.
+Os servidores do tipo Blade são formados por um microprocessador, barramentos e memória, e o conjunto de blades compartilha da mesma conexão de rede, refrigeração e fornecimento de energia. Seus componentes são armazenados dentro de um chassi ou gabinete. Mesmo tendo um tamanho reduzido, os servidores são úteis para o desenvolvimento de data centers e hospedagens de serviços web, pois, é mais flexível em relação à velocidade que a quantidade de armazenamento de dados vai crescendo, em vista que são modulares.
+Os servidores racks atendem melhor grandes empresas que necessitam de uma infraestrutura de TI complexa. Possui um alto desempenho e tem um melhor aproveitamento do espaço, permitindo a retirada e inclusão de servidores de acordo com a demanda e necessidade de armazenamento.
+Os dispositivos de storage é uma solução confiável, além dos servidores locais, para o armazenamento de dados e arquivos. Porém, não tem capacidade para transferências frequentes dessas informações entre as máquinas que compõe o sistema. São apenas aparelhos que atuam como um HD (disco rígido), não possuindo uma interface, sistema operacional, que permita a transferência de dados, nem acesso múltiplo de computadores.
+O gerenciamento de dados em servidores na Nuvem, é o armazenamento de dados online no servidor de empresas que forneçam esse serviço. Sendo uma alternativa mais em conta quando se trata do tamanho do empreendimento, quantidade de dados que serão armazenados e utilizados. Sendo online, o serviço fornecido depende muito mais da internet do contratante. O acesso às informações guardadas e à inserção/alteração dos dados, tem uma menor agilidade, rapidez e segurança quando se comparado à um servidor local. A segurança de um armazenamento em nuvem, depende mais da empresa à qual fornece o serviço. Então, os dados ficam vulneráveis aos ataques aos servidores da empresa.
+A alternativa que mais se adequa a realidade do projeto, é o uso de um servidor local, assim, terá um acesso mais rápido aos dados, uma segurança maior e uma manutenibilidade de qualidade e rápida. 
+A Faculdade do Gama possui um servidor para atender suas necessidades, como o portal da FGA , sites de professores, dentre outros serviços. O servidor é do tipo Rack e está localizado na sala 36, do prédio UED. Portanto, os dados obtidos diariamente no projeto, serão armazenados no próprio servidor da faculdade, tendo em vista que ele está disponível para o nosso uso.
+Para o banco de dados será estruturada uma arquitetura de processamento e armazenamento dos dados, utilizando o sistema de gerenciamento de dados MySQL (My Structured Query Language). O MySQL é um sistema de código aberto com base no sistema operacional Windows e muito utilizado por grandes empresas como a NASA(National Aeronautics and Space Administration), Banco Bradesco, entre outras. Esse sistema se destaca em relação aos outros quando o objetivo é obter velocidade de acesso aos dados armazenados, porém a base de dados sendo pequena não se nota diferença de comportamento em relação a velocidade de acesso entre o MySQL e outros sistemas. Utilizando o MySQL o responsável pela manutenção do sistema terá a sua disposição mais níveis de isolamento de transações que em outros sistemas como mostra a tabela ~\ref{table:niveis_isol}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+\caption{Comparação Níveis de Isolamento.}
+\label{table:niveis_isol}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|}
+\hline
+Isolamento & \multicolumn{1}{l|}{Oracle} & \multicolumn{1}{l|}{SQL Server} & \multicolumn{1}{l|}{PostgreSQL} \\ \hline
+Read uncommitted &  & x &  \\ \hline
+Read committed & x & x & x \\ \hline
+Repeatable read &  & x &  \\ \hline
+Serializable & x & x & x \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+Atualmente os sistemas de gerenciamento de banco de dados (SGBDs) suportam vários tipos de storage engines e até mais de uma no mesmo sistema. As engines dos SGBDs são responsáveis por criar, ler, atualizar,  e deletar (do inglês create, read, update and delete. CRUD) os dados no sistema e na tabela ~\ref{table:storage_engines} tem alguns exemplos de engines que são ou não transacionais e as engines que se integram perfeitamente ao sistema MySQL são InnoDB e MyISAM.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+\caption{Storage Engines}
+\label{table:storage_engines}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+\hline
+Nome & Licença & Transacional \\ \hline
+Aria & GPL & Não \\ \hline
+BlitzDB & GPL & Não \\ \hline
+Falcon & GPL & Sim \\ \hline
+InnoDB & GPL & Sim \\ \hline
+MyISAM & GPL & Não \\ \hline
+InfiniDB & GPL & Não \\ \hline
+TokuDB & GPL & Sim \\ \hline
+WiredTiger & GPL & Sim \\ \hline
+XtraDB & GPL & Sim \\ \hline
+RocksDB & BSD & Sim \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+O MyISAM é a engine nativa do MySQL e oferece um gerenciamento de dados mais conservativo deixando cada tabela em um arquivo diferente que pode ser comprimido com o comando myisamchk se for necessário diferentemente do InnoDB que armazena as tabelas em um espaço especial para as tabelas, o que impossibilita a otimização do espaço. Algumas funções são executadas com mais eficácia que no InnoDB por causa da complexidade do espaço especial das tabelas do InnoDB.
+Em compatibilidade com o sistema de gerenciamento de banco de dados MySQL (Linguagem de Consulta Estruturada) o InnoDB se torna a opção mais viável para ser a engine do banco de dados. Além da compatibilidade com o MySQL o InnoDB difere de seu concorrente MyISAM por oferecer a função transacional que implica em um modo de funcionamento “tudo ou nada”. O sistema transacional preza a integridade dos dados, portanto se algum erro ocorrer ou faltar energia/conectividade o sistema não irá gravar os dados pela metade no banco de dados e executará um rollback para os dados anteriores ao erro. Enquanto o tempo de recuperação do MyISAM cresce de acordo com o tamanho do banco de dados a capacidade de rollback do InnoDB economiza tempo diante de uma falha.
+Com base no estudo da equipe de Automação - Controle de Acesso, serão armazenados e renovados toda vez que o aluno utilizar a carteirinha um token. Além, de cada um possuir um chip, embutido em sua carteirinha. Armazenados então, um dado do tipo inteiro de 4 bytes[5], referente ao token. E inicialmente um array de char de 5 caracteres. Cada char possui um tamanho de 1 byte[5], tendo então, um dado referente ao chip da carteirinha de 5 bytes. Com isso temos que 5000 mil alunos utilizam 45000 bytes ou 4,5e-5 gigabytes.
+Os dados que serão disponibilizados pelo trabalho da equipe responsável pelo Smart Grid, serão dois do tipo float, 4 bytes[5] cada, e um do tipo date, 4 bytes[5]. Respectivamente, um dado sobre o consumo diário, um outro da produção diária, e o dia referente ao consumo/produção, o que totaliza 20 bytes por dia ou 6e-7 gigabytes por mês.
+Considerando cerca de 15 itens, entre sensores e outros dispositivos eletrônicos,  que geram dados por ambiente e 25 ambientes no prédio, o grupo de de automação - Instrumentação e Controle determinou que para cada dispositivo gerando 100 bytes por segundo, cerca de 0.3 gigabytes por mês com mais 5 gigabyte de aplicações para processamento de dados, sem mais dados armazenados de antemão totalizando 14 gigabytes por mês.
+A quantidade de dados obtidos diariamente gerará na faixa de 14,0000006 gigabytes por mês além dos 5.0045 gigabytes já armazenados como dados fixos. Assim, serão armazenados no servidor Rack, já existente na faculdade, e gerenciados pelo InnoDB.
+
+\section{Arquitetura do Aplicativo}
+
+Como forma de informação para usuários do prédio e integração entre as mais diversas funcionalidades dele um aplicativo web-app servirá de ponte ligando os usuários as informações.
+Um web-app é um site com domínio próprio que é acessado por meio de um navegador com o diferencial de ser responsivo, ou seja, sua funcionalidades são flexíveis de forma a permitir adaptação a qualquer dispositivo que o acesse.
+
+\subsection{Model-View-Controller}
+
+Para a arquitetura de software da aplicação web que será interligada ao uso do prédio, foram feitas diversas pesquisas e estudos, e a arquitetura escolhida foi a Model-View-Controller(MVC), em português modelo-visão-controlador.
+ 
+MVC é um padrão de arquitetura de software que divide a representação da informação da interação do usuário com ele. Desta forma, alterações feitas na interface não afetam a manipulação de dados, e estes poderão ser reorganizados sem alterar a interface.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.45]{figuras/MVC.eps}
+  \caption{Arquitetura Model-View-Controller}
+  \label{fig:mvc}
+\end{figure}
+
+Model: É responsável pelo armazenamento dos dados, assim como a  validação e manipulação deles. A regra é simples: tudo que diz respeito à escrita, validação e leitura dos dados está dentro da camada model.
+View: A camada de interação com o usuário e também de exibição de dados. Ela faz a  exibição dos dados, sendo ela por meio de um html ou xml.
+Controller: É responsável por receber todas as requisições do usuário. Seus métodos, chamados actions, são responsáveis pela página, controlando qual model usar e qual view será mostrado ao usuário.
+Neste projeto, tanto o back-end quanto o front-end farão uso do framework Rails. Sua organização de pastas segue a organização descrita na figura ~\ref{fig:pastas}:
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.4]{figuras/pastas.eps}
+  \caption{Estrutura de Diretórios do Aplicativo}
+  \label{fig:pastas}
+\end{figure}
+
+\subsection{Model-View-ViewModel}
+
+MVVM é um padrão arquitetural, que impõe uma separação da interface do usuário XAML (a View) dos dados subjacentes (a Model) através de uma classe que serve como um intermediário entre a View e a Model (ViewModel). View e ViewModel geralmente são conectadas através de ligações de dados (binding) definidas no arquivo XAML.
+A Model é responsável por realizar o gerenciamento e validação de dados bem como o estado da aplicação. 
+A View é a interface de usuário, exibe informações ao usuário, e responde às interações.
+A ViewModel é a classe que estabelece a conexão entre View e Model, atualizando os dados na Model, que foram modificados através dos eventos na View. 
+Os testes são realizados sobre a ViewModel, pois é ela que possui toda a lógica necessária para que a View possa funcionar de forma esperada, e a ViewModel não tem conhecimento sobre nada na View.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.6]{figuras/MVVM.eps}
+  \caption{Arquitetura MVVM}
+  \label{fig:mvvm}
+\end{figure}
+
+\section{Escolha da Arquitetura}
+
+Considerando os padrões MVVM (Model-View-ViewModel) e MVC (Model-View-Controller), não existe um superior ao outro, mas sim qual se adequa melhor ao projeto a ser desenvolvido. No caso do Prédio Sustentável, a aplicação web será construída utilizando Ruby on Rails, que por padrão é MVC.
