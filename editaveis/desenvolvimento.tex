@@ -6,10 +6,13 @@ Neste capítulo abordaremos todas as soluções idealizadas para o projeto. O ca
 
 \chapter[Smart Grid]{Smart Grid}
 
+\section{Energia Solar}
+Inicialmente, para o suprimento de energia do projeto considerou-se três fontes de geração de energia à ser utilizado, sendo elas: Eólica, Gerador movido a biodiesel e a Solar fotovoltaica. A partir daí fez-se um levantamento das vantagens e desvantagens de cada fonte de energia, como pode-se ver nas tabelas ~\ref{table_eolica}, ~\ref{table_solar} e ~\ref{table_biodiesel}.
+
 \begin{table}[h]
   \centering
   \caption{Energia Eólica - Vantagens x Desvantagens}
-  \label{my-label}
+  \label{table_eolica}
   \begin{tabular}{|l|l|}
     \hline
     \multicolumn{2}{|c|}{\textbf{Energia Eólica}}                                         \\ \hline
@@ -23,7 +26,7 @@ Neste capítulo abordaremos todas as soluções idealizadas para o projeto. O ca
 \begin{table}[h]
   \centering
   \caption{Energia Solar Fotovoltaica - Vantagens x Desvantagens}
-  \label{my-label}
+  \label{table_solar}
   \begin{tabular}{|l|c|}
     \hline
     \multicolumn{2}{|c|}{\textbf{Energia Solar Fotovoltaica}}                                                \\ \hline
@@ -41,7 +44,7 @@ Neste capítulo abordaremos todas as soluções idealizadas para o projeto. O ca
 \begin{table}[h]
   \centering
   \caption{Gerador Movido a Biodiesel - Vantagens x Desvantagens}
-  \label{my-label}
+  \label{table_biodiesel}
   \begin{tabular}{|c|l|}
     \hline
     \multicolumn{2}{|c|}{\textbf{Gerador Movido a Biodiesel}}                                            \\ \hline
@@ -53,6 +56,133 @@ Neste capítulo abordaremos todas as soluções idealizadas para o projeto. O ca
   \end{tabular}
 \end{table}
 
+Escolheu-se a geração de energia solar fotovoltaica para suprir a demanda do prédio. Como fonte secundária escolheu-se o gerador, sendo este utilizado somente em momento de emergência, visto que as desvantagens do mesmo superam quando utilizado em um período longo de produção.
+O Prédio Sustentável e Inteligente necessita das integrações entre as áreas para que o mesmo tenha êxito em oferecer para os estudantes e funcionários um melhor ambiente. Dessa forma, houve uma integração entre as frentes de estrutura (responsável pela parte estrutural e escolha de materiais do projeto) e de Smart Grid (responsável pelo suprimento da demanda energética da FGA) para decisão do melhor local para a instalação da micro-usina solar fotovoltaica. Surgiram-se três opções: nas paredes, nos telhados e na parte terrestre. Porém, estabeleceu-se que a instalação se daria no telhado do prédio, visto que o mesmo possui uma grande área inerte que se tornaria funcional. Outro ponto é a incidência solar que é significativamente maior na parte superior do prédio, pois não há sombreamento devido a algum obstáculo. 
+Já nas opções descartadas, verificou-se a dificuldade de manutenção quando colocadas nas paredes e no local terrestre, a maior desvantagem seria o uso de uma grande área e também a existência  de uma grande quantidade de animais selvagens no local, visto que a FGA está localizada em uma região em que o cerrado é predominante.
+Com a fonte de geração de energia determinada, bem como o local da instalação da micro-usina solar fotovoltaica, fez-se uma estimativa de consumo de energia (Wh) baseada na demanda já requerida pelo prédio atual, com o  objetivo de definir a potência instalada da micro-usina. 
+Mesmo com a existência de muitas variáveis desconhecidas, que impactam negativamente no valor estimado, os dados conhecidos foram suficiente para estimar a potência instalada, bem como a quantidade de módulos fotovoltaicos necessários para suprir a demanda energética do novo prédio. Ao se fazer essa estimativa com a demanda do prédio já existente têm-se  alta possibilidade de produzir-se uma maior quantidade de energia do que a realmente necessária, visto que os equipamentos elétricos e eletrônicos selecionados pelo subgrupo de instrumentação, são altamente eficientes energeticamente.
+Para relembrar o efeito fotovoltaico é resultado da interação da luz com os materiais semicondutores (o mais usado é o silício, pois tem em grande quantidade na natureza) de uma célula fotovoltaica. No interior desta, tal efeito é o responsável pela transformação de energia solar em energia elétrica. A luz solar é composta por fótons que quando incididos no material semicondutor parte deles são absorvidos, excitando os elétrons do material, gerando assim um fluxo de elétrons (corrente). (IDEAL, 2015)
+A geração de energia elétrica a partir de placas fotovoltaica é um método bastante difundido atualmente e vem crescendo constantemente. As células solares captam a radiação do sol e através dos fótons geram corrente contínua. Essa corrente passa por um inversor para que seja convertida em corrente alternada com as características da rede (senoidal e frequência de 60Hz). Após passar pelo inversor a eletricidade poderá ser usada para o consumo. Caso a geração exceda o consumo, o restante é inserido na rede e caso o consumo seja maior que a geração solar o restante da energia consumida é oriunda da rede elétrica. (AMERICA DO SOL, 2016)
+Para a realização da estimativa de consumo de energia, escolheu-se como variáveis: as lâmpadas, computadores e ar-condicionados. As mesmas foram escolhidas visto à facilidade de dimensioná-las. Também estabeleceu-se algumas premissas, como: período de funcionamento das variáveis de 10 horas, ou seja, no período onde possui maior fluxo de pessoas e desconsiderou-se a quantidade de equipamentos não operantes. Essas premissas foram tomadas devido à grande margem de erro que se tem. A seguir, as tabelas ~\ref{fig:lampadas}, ~\ref{fig:computadores} e ~\ref{fig:ar_condicionados} mostram a potência e horário de funcionamento de cada equipamento, bem como a energia consumida por cada um.
+Onde:
+
+\centerline{Qtd= quantidade} 
+\centerline{[W]=Watts} 
+\centerline{[h]=hora} 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/lampadas.eps}
+  \caption{Dimensionamento do consumo de energia das lâmpadas}
+  \label{fig:lampadas}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/computadores.eps}
+  \caption{Dimensionamento do consumo de energia dos computadores}
+  \label{fig:computadores}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.3]{figuras/ar_condicionados.eps}
+  \caption{Dimensionamento do consumo de energia dos ar-condicionados.}
+  \label{fig:ar_condicionados}
+\end{figure}
+
+Em seguida, somou-se o consumo de todos os componentes e obteve-se o consumo total de energia por dia no valor de 1.051,12 KWh/dia. Para o cálculo do consumo mensal, considerou-se um total de 22 dias úteis  e, portanto, um consumo mensal de 23.124,64 KWh/mês. 
+Obtido o resultado do consumo de energia fez-se uma simulação no software SAM (System Advisor Model) para a realização do dimensionamento do sistema fotovoltaico. Primeiramente, entrou-se com a localização no programa de modo que o mesmo através da latitude e longitude determinasse a incidência solar. Em seguida, escolheu-se o painel solar a ser utilizado (Painel solar da marca Canadian de 255 Wp, eficiência de 16,44\% e 1638x982x40 mm), como pode-se ver na Figura ~\ref{fig:placa}, e escolheu-se o inversor da marca ABB de 50KW. 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.8]{figuras/placa.eps}
+  \caption{Placa solar marca Canadian.}
+  \label{fig:placa}
+\end{figure}
+
+O Gráfico ~\ref{fig:smartgrid1} a eficiência do inversor com a porcentagem de Potência nominal de saída.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/smartgrid1.eps}
+  \caption{Dados do inversor escolhido.}
+  \label{fig:smartgrid1}
+\end{figure}
+
+Já o gráfico ~\ref{fig:smartgrid2} relaciona a corrente do módulo fotovoltaico com a voltagem do módulo ou seja quanto maior a voltagem menor a corrente elétrica.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.4]{figuras/smartgrid2.eps}
+  \caption{ Dados do módulo fotovoltaico.}
+  \label{fig:smartgrid2}
+\end{figure}
+
+Após a escolha do inversor cuja função é converter a corrente contínua gerada pelas placas em corrente alternada, com frequência de 60hz e do painel solar, entrou-se com o valor de potência desejada (116,952KW) e o programa calculou a quantidade necessária de painéis igual a 456. O mesmo também calculou a quantidade necessária de inversores igual a 2 e a área total ocupada pelos painéis solares igual a 706,3 m2, como pode-se ver na Figura ~\ref{fig:estimativa_paineis}. Essa área corresponde somente ao total de painéis solares, sabe-se que para a instalação da micro-usina uma área maior é necessária, pois existem outros fatores que ocupam espaço, como: suporte dos painéis, espaçamento entre as fileiras dos mesmos de modo que uma fileira não faça sombra nas outra, espaço para pessoas caminharem para a realização de manutenção e limpeza dentre outros fatores.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/estimativa_paineis.eps}
+  \caption{Dimensionamento do sistema.}
+  \label{fig:estimativa_paineis}
+\end{figure}
+
+\subsection{Normas da CEB}
+
+O Sistema de Geração distribuída é utilizado por geradores de pequeno porte com geração a partir de fontes renováveis. No projeto do Prédio Sustentável da FGA será utilizado a minigeração distribuída a partir de fontes fotovoltaicas.
+De acordo com os regulamentos da ANEEL a microgeração distribuída pode ser definida como centrais geradoras que utilizam fontes renováveis de energia com uma potência instalada superior a 75 kW e menor ou igual a 5 MW. A Resolução Normativa nº 482/2012 estabelece o sistema de Compensação de Energia Elétrica, que autoriza que a energia excedente gerada pela microgeração distribuída seja injetada na rede da distribuidora para suprir o consumo do prédio. Quando a energia injetada na rede for maior que a energia produzida é gerado um crédito para o consumidor, que pode ser abatido em tarifas posteriores do mesmo, quando a energia injetada for inferior à consumida a unidade consumidora é abastecida pela concessionária local.
+A concessionária que abrange este projeto é a Companhia Energética de Brasília (CEB). Esta estabelece uma resolução normativa (NTD 6.09) que deverá ser seguida para instalação e execução de um projeto de geração distribuída.
+Os procedimentos de acesso estão detalhados no módulo 3 dos Procedimentos de Distribuição (PRODIST). Consistem nas várias etapas necessárias para a obtenção de acesso ao sistema de distribuição.. Para a viabilização do acesso ao sistema elétrico é necessário o cumprimento das etapas de solicitação de acesso e parecer de acesso. Essas etapas são apresentadas de forma sucinta na figura ~\ref{fig:fluxograma}.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/fluxograma_smartgrid.eps}
+  \caption{Etapas de acesso de Microgeradores ao Sistema de Distribuição da CEB-D.}
+  \label{fig:fluxograma}
+\end{figure}
+
+A solicitação é formalizada através de formulário específico, conforme potência instalada  a ser encaminhado obrigatoriamente à CEB-D pelo acessante que se propõe a interligar sistemas de microgeração e minigeração ao sistema de distribuição. Os formulários e as documentações necessárias reúnem as informações técnicas e básicas para os estudos pertinentes ao acesso, bem como os dados que posteriormente serão enviados a ANEEL para fins de registro da unidade de geração.Caso a documentação entregue esteja incompleta, a solicitação será recusada, devendo o acessante realizar um novo pedido após a regularização das pendências. 
+
+\section{Gerador Movido a Biodiesel}
+
+Nessa introdução será abordado a caracterização do uso do gerador, e a partir dos dados obtidos, será reformulado uma versão para o gerador que funcionará na Faculdade Gama da Universidade de Brasília (FGA/UnB).
+A geração de energia a partir do biodiesel, possui suas vantagens e desvantagens, porém, com a conscientização ambiental crescente da população, e também da situação crítica do planeta em relação ao aquecimento global, a utilização de recursos renováveis em detrimento aos combustíveis fósseis, viabiliza o uso do biodiesel e a seguir será apresentado as suas vantagens e desvantagens (CRITICAL POWER, 2015):
+
+Vantagens:
+\begin{itemize}
+  \item Fonte de energia renovável;
+  \item Pode ser feito através de óleo usado;
+  \item Menos emissões de poluentes em relação aos combustíveis fósseis;
+\end{itemize}
+
+Desvantagens:
+\begin{itemize}
+  \item Existem barreiras técnicas para o uso do biodiesel extensivamente;
+  \item A falta de padrões da indústria torna difícil avaliar o desempenho do combustível e as diferenças de processamento;
+\end{itemize}
+
+De acordo com o estudo feito por Castellanelli et al. (2008) com o biodiesel feito a partir do processo de transesterificação etílica do óleo de soja, para um motor gerador à diesel de 4 tempos, com potência nominal de 102,97 kW (140 cv) para 2500 RPM (Tabela 1), a fim de suprir energia para horário de ponta em indústrias, no intuito de reduzir a conta de energia elétrica dessas empresas.
+O estudo feito por Castellanelli et al. (2008) demonstrou os valores de potência, torque, de consumo específico do biodiesel B100 (100\% de biodiesel), assim como a viabilidade econômica do gerador com biodiesel. Os dados citados são visualizados nas tabelas ~\ref{fig:tabela_motor} e ~\ref{fig:tabela_resultados}.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/tabela_motor.eps}
+  \caption{Especificações técnicas do motor de teste.}
+  \label{fig:tabela_motor}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/tabela_resultados.eps}
+  \caption{Valores máximos obtidos.}
+  \label{fig:tabela_resultados}
+\end{figure}
+
+Como podemos perceber, o valor máximo nominal de potência é de 102,97 kW para 2500 RPM, contudo os testes resultaram em 44,1 kW para 2467 RPM, ou seja, fazendo uma relação de proporcionalidade, verifica-se que o rendimento do gerador é de 47,56\%.
+Vemos ainda que o consumo específico mínimo do B100 é de 321,3 g/kWh para 1933 RPM.
+A demanda da potência em um dia para a FGA/UnB, durante seu período útil, das 08 horas da manhã até 18 horas da tarde, é de 105,11 kW, porém com o rendimento do gerador de 47,56\%, é necessário o gerador com capacidade de 155,10 kW.
+De acordo com (GERIS, 2007) o biodiesel de soja possui uma densidade aproximada de 0,877 kg/l, como o consumo específico para 1933 RPM é de 321,3 g/kWh, portanto espera-se que para 2500 RPM o consumo seja de 431,55 g/kWh, isso equivale à 0,47382 l/kWh, ou seja, para 155,10 kW utilizar-se-á 73,50 litros operando em uma hora.
 
 \chapter[Controle de Acesso]{Controle de Acesso}
 \section{Escolha da Tecnologia}
