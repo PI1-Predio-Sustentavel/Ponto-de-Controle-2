@@ -298,6 +298,38 @@ Para a escolha do sistema RFID no controle das salas, foi feito um balanço fina
 
 A primeira tabela se refere ao dispositivo utilizado que é o mesmo do controle de frequência, já mencionado anteriormente com mais detalhes. A segunda tabela, por sua vez, mostra um detalhamento sobre os tipos de fechadura visto por empresas diferentes. Analisando toda a tabela, é notável que a fechadura Intelbras FFX 1000 tem um preço mais acessível, comparado às outras, além de ser tão eficiente quanto todas pesquisadas.
 
+\section{Acesso ao Estacionamento}
+
+Já foram apresentadas anteriormente (no Ponto de Controle 1) as vantagens e desvantagens do controle do acesso ao estacionamento. Em resumo: por um lado temos a sonhada segurança no campus da FGA e por outro lado temos a rejeição do público alvo com o novo sistema.
+
+O sistema funcionará utilizando um leitor RFID de baixa frequência, essa gama de frequências estende-se dos 30KHz aos 300KHz. Os leitores, nesta gama de frequências, operam a 125 ou 135 KHz e possuem um alcance inferior a meio metro com a velocidade de transferência inferior a 1 kbits/s, o que significa que este opera em baixa interferência com o meio ambiente e tem um comportamento bom na leitura de tags em objetos contendo líquidos e metais, assim todo o processo do microcontrolador de chegar no banco de dados as informações do aluno, professor ou funcionário acontecerá, e permitirá ou não a passagem do carro para o estacionamento privativo.
+
+Além de contar com o aparelho leitor RFID e a cancela para controlar o acesso, o estacionamento também terá uma câmera que filmará em tempo real a placa do carro e o motorista, constatando o horário de saída e entrada do carro.
+
+Apesar desse sistema de segurança ser primordial no projeto, ele é um sistema de fácil implementação e uso, tendo em vista que não há um diferenciamento específico de pessoas que entram no estacionamento. Qualquer pessoa da faculdade pode entrar sem exceções e o sistema de banco de dados com nome e matrícula é o mesmo que outras partes de controle de acesso também utilizam.
+
+Em termos financeiros, o projeto de controle de acesso ao estacionamento é considerado viável devido ao \textit{payback} de todos os equipamentos utilizados com é mostrado na tabela a seguir.
+
+\pagebreak
+
+\begin{table}[h]
+  \centering
+  \caption{Custos - Estacionamento}
+  \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Item}} & \multicolumn{2}{c|}{\textbf{Quantidade}} & \multicolumn{1}{c|}{\textbf{Descrição}}                                                               & \textbf{R\$ (unidade)} & \textbf{R\$ (total)} \\ \hline
+    \multicolumn{2}{|l|}{1}             & \multicolumn{2}{l|}{2}                   & \parbox[t]{6cm}{Instalação de CPU ou totens de leitura de tags RFID.}                                                  & R\$678,00              & R\$1.356,00          \\ \hline
+    \multicolumn{2}{|l|}{2}             & \multicolumn{2}{l|}{2}                   & Hardware de comunicação com cancelas.                                                                 & R\$800,00              & R\$1.600,00          \\ \hline
+    \multicolumn{2}{|l|}{3}             & \multicolumn{2}{l|}{2}                   & \parbox[t]{6cm}{Sensores de leitura infra-vermelho, para identificação da saida de veiculos e fechamento de cancelas.} & R\$1.200,00            & R\$2.400,00          \\ \hline
+    \multicolumn{6}{|l|}{\textbf{TOTAL:}}                                                                                                                                                                           & R\$5.356,00          \\ \hline
+  \end{tabular}
+\end{table}
+
+Apesar de serem equipamentos caros, estes possuem uma longa vida útil, se usados corretamente, ou seja, se trata de um investimento à longo prazo de um bem útil à todo o corpo universitário.
+
+
+
+Vale a pena ressaltar que o aparelho de frequência é o mesmo utilizado em todas as frentes de controle de acesso, a única diferença entres as frentes é que para o controle nas salas e controle do estacionamento ele estará preso em uma superfície plana na vertical, para que o usuário possa fazer uso dele tanto em pé quanto dentro do automóvel.
 
 \chapter[Instrumentação e Controle]{Instrumentação e Controle}
 
